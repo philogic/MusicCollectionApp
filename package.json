@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
@@ -20,21 +21,14 @@
     "react-test-renderer": "16.3.1"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "plugins": [
       "react",
       "react-native"
     ],
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "extends": "plugin:react-native/all",
     "env": {
       "react-native/react-native": true
-    },
-    "rules": {
-      "react-native/no-unused-styles": 2,
-      "react-native/split-platform-components": 2,
-      "react-native/no-inline-styles": 2,
-      "react-native/no-color-literals": 2
     }
   },
   "jest": {
