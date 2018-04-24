@@ -20,7 +20,9 @@ const styles = {
     // IOS only
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2
+    shadowOpacity: 0.2,
+    // Android only
+    elevation: 3
   },
   headerText: {
     fontSize: 20
