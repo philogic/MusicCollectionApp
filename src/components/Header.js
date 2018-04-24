@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const Header = () => {
+const Header = (props) => {
   const { headerText, headerView } = styles;
   return (
     <View style={headerView}>
-      <Text style={headerText}>Music!</Text>
+      <Text style={headerText}>{props.headerText}</Text>
     </View>
   )
 };
@@ -21,6 +21,7 @@ const styles = {
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
+    position: 'relative',
     // Android only
     elevation: 3
   },
