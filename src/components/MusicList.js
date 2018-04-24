@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-const MusicList = () => {
-  return (
-    <View>
-      <Text>Music List</Text>
+class MusicList extends Component {
+  render() {
+    return <View>
+      <Text>MusicList</Text>
     </View>
-  )
-};
+  }
+}
+
 
 export default MusicList;
