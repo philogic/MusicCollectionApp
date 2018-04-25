@@ -6,7 +6,7 @@ import MusicList from './src/components/MusicList'
 const App = () => (
   <View>
     <Header headerText={'Music'}/>
-    <MusicList/>
+    <MusicList />
   </View>
 );
 
