@@ -29,7 +29,7 @@ const MusicDetail = ({ music }) => {
         <Image source={{uri: image}} style={bigImageStyle}/>
       </CardItem>
       <CardItem>
-        <Button/>
+        <Button whenPressed={() => console.log({title})}/>
       </CardItem>
     </Card>
   )
