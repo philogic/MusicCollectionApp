@@ -2,13 +2,15 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
+import Button from './Button';
 
 const MusicDetail = ({ music }) => {
-  const { title, artist, thumbnail_image } = music;
+  const { title, artist, image, thumbnail_image } = music;
   const { imageStyle,
           imageContainerStyle,
           headerContentStyle,
-          headerTextStyle
+          headerTextStyle,
+          bigImageStyle
   } = styles;
   return (
     <Card>
@@ -22,6 +24,12 @@ const MusicDetail = ({ music }) => {
           <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardItem>
+      <CardItem>
+        <Image source={{uri: image}} style={bigImageStyle}/>
+      </CardItem>
+      <CardItem>
+        <Button/>
       </CardItem>
     </Card>
   )
@@ -44,6 +52,11 @@ const styles = {
     alignItems: 'center',
     marginLeft: 15,
     marginRight: 15,
+  },
+  bigImageStyle: {
+    height: 350,
+    flex: 1,
+    width: null
   }
 };
 
