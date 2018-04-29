@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import styles from '../styles'
 
 const CardItem = (props) => {
   return(
@@ -10,15 +11,3 @@ const CardItem = (props) => {
 };
 
 export default CardItem;
-
-const styles = {
-  cardItemStyle: {
-    borderBottomWidth: 1,
-    padding: 5,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    borderColor: '#ddd',
-    position: 'relative',
-  }
-}
