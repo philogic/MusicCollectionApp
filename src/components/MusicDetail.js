@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
 import Button from './Button';
 
 const MusicDetail = ({ music }) => {
-  const { title, artist, image, thumbnail_image } = music;
+  const { title, artist, image, thumbnail_image, url } = music;
   const { imageStyle,
           imageContainerStyle,
           headerContentStyle,
@@ -29,7 +29,7 @@ const MusicDetail = ({ music }) => {
         <Image source={{uri: image}} style={bigImageStyle}/>
       </CardItem>
       <CardItem>
-        <Button whenPressed={() => console.log({title})}/>
+        <Button whenPressed={() => Linking.openURL(url)}/>
       </CardItem>
     </Card>
   )
