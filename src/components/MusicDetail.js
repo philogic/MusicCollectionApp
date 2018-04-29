@@ -29,7 +29,9 @@ const MusicDetail = ({ music }) => {
         <Image source={{uri: image}} style={bigImageStyle}/>
       </CardItem>
       <CardItem>
-        <Button whenPressed={() => Linking.openURL(url)}/>
+        <Button whenPressed={() => Linking.openURL(url)}>
+          Buy Now
+        </Button>
       </CardItem>
     </Card>
   )
